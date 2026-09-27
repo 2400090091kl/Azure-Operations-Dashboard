@@ -1,0 +1,740 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "🚨 ACTIVE ALERTS",
+        "style": "info"
+      },
+      "customWidth": "50",
+      "name": "text - 8"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "AZURE OPERATIONS DASHBOARD\r\nVM Health & Performance Monitoring"
+      },
+      "customWidth": "50",
+      "name": "text - 0"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook9f669f40-41be-4e6f-8d45-3ce404bb053f",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Available Memory Percentage",
+            "aggregation": 4,
+            "columnName": "Available Memory (%)"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 2"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookde2c72f6-7f6b-476b-b0a1-80b1bcea1ba5",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Data Disk Read Bytes/sec",
+            "aggregation": 4,
+            "columnName": "Disk Read (Bytes/sec)"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 3"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook2a5c9981-5c1d-4547-b006-a9abe5611fd1",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network In Total",
+            "aggregation": 1,
+            "columnName": "Network In"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 4"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook219593cd-d524-428a-878c-423fd90ed6d7",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network Out Total",
+            "aggregation": 1,
+            "columnName": "Network Out"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 5"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook87a05577-1b9b-4acd-ba69-2564bc2b6864",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-VmAvailabilityMetric",
+            "aggregation": 4,
+            "columnName": "VM Availability"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 6",
+      "styleSettings": {
+        "showBorder": true
+      }
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "resources\r\n| where type =~ \"microsoft.insights/metricalerts\"\r\n| where resourceGroup == \"rg-azureops-hackathon\"\r\n| project\r\n    AlertName = name,\r\n    Enabled = tostring(properties.enabled),\r\n    Severity = tostring(properties.severity),\r\n    Description = tostring(properties.description)\r\n| order by AlertName asc",
+        "size": 1,
+        "queryType": 1,
+        "resourceType": "microsoft.resourcegraph/resources"
+      },
+      "customWidth": "50",
+      "name": "query - 7"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "⚙️ OPERATIONS OVERVIEW"
+      },
+      "name": "text - 9"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook94f9b5d2-c2e9-4cd3-acbc-702d31702355",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Percentage CPU",
+            "aggregation": 4,
+            "columnName": "CPU Utilization"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 10"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookb2622de7-30c2-47c3-96e0-7bb9a2090121",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Available Memory Percentage",
+            "aggregation": 4,
+            "columnName": "Available Memory"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 11"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook5beb0620-91ef-4762-85b3-bc9347516199",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Data Disk Read Bytes/sec",
+            "aggregation": 4,
+            "columnName": "Disk Read"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 12"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook83ca524c-a17b-4aae-9fd7-dd90836d50d0",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network In Total",
+            "aggregation": 1,
+            "columnName": "Network In "
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 13"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbooka9c31a9c-b7d3-48a5-8143-9704709d4152",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network Out Total",
+            "aggregation": 1,
+            "columnName": "Network Out"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 14"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook078f5195-9e9e-488b-9c1e-c67bccbcf3da",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-VmAvailabilityMetric",
+            "aggregation": 4,
+            "columnName": "VM Availability"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 15"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "## 🟢 RESOURCE HEALTH"
+      },
+      "name": "text - 16"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "HealthResources\r\n| where type =~ 'microsoft.resourcehealth/availabilitystatuses'\r\n| where tostring(properties.targetResourceId) has 'vm-azureops-demo'\r\n| project\r\n    Resource = tostring(properties.targetResourceId),\r\n    AvailabilityState = tostring(properties.availabilityState),\r\n    OccurredTime = todatetime(properties.occurredTime)",
+        "size": 1,
+        "queryType": 1,
+        "resourceType": "microsoft.resourcegraph/resources",
+        "visualization": "table"
+      },
+      "customWidth": "50",
+      "name": "query - 17"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook963c6902-5f70-4f3c-a07b-777e3340aa23",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-VmAvailabilityMetric",
+            "aggregation": 4,
+            "columnName": "VM Availability"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 20"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook2665a938-1814-4e9d-a593-83b2d1486f14",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network In Total",
+            "aggregation": 1,
+            "columnName": "Network In"
+          }
+        ],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 21"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook3a59ce59-eed2-4343-89da-9b72a233a23d",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Network Out Total",
+            "aggregation": 1,
+            "columnName": "Network Out"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 22"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook1458f405-1ae2-4629-8b93-3160dfdfe236",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Disk Read Bytes",
+            "aggregation": 1,
+            "columnName": "Disk Read"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 23"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookd4312e28-eec2-4e10-b003-554913c22b3a",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Disk Write Bytes",
+            "aggregation": 1,
+            "columnName": "Disk Write"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 24"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook06c45d64-cc33-4c51-a2ff-c671f3a7cb7f",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Disk Read Operations/Sec",
+            "aggregation": 4,
+            "columnName": "Disk Read"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 25"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookf8900c71-9679-4a62-8ffe-07de18557f17",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": -1,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/rg-azureops-hackathon/providers/Microsoft.Compute/virtualMachines/vm-azureops-demo"
+        ],
+        "timeContext": {
+          "durationMs": 3600000
+        },
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines-Other-Disk Write Operations/Sec",
+            "aggregation": 4,
+            "columnName": "Disk Write"
+          }
+        ],
+        "gridFormatType": 1,
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Name",
+            "formatter": 13
+          },
+          "leftContent": {
+            "columnMatch": "Value",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        },
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "customWidth": "50",
+      "name": "metric - 26"
+    }
+  ],
+  "fallbackResourceIds": [
+    "/subscriptions/7f55279d-3ff8-4c04-b286-a492311fb85d/resourceGroups/RG-AZUREOPS-HACKATHON/providers/Microsoft.Compute/virtualMachines/VM-AZUREOPS-DEMO"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
